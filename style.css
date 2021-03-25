@@ -1,0 +1,401 @@
+/* test 2 */
+ *, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+font-size: 10px;
+scroll-behavior: smooth;
+}
+/*
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+}
+*/
+
+body{
+  background-color:#f5f5f5 ;
+}
+
+@font-face
+{
+	font-family: "DIN-Regular";
+	src: url("typographie/DIN-Regular.ttf");
+}
+
+@font-face
+{
+  font-family: "Palo-light";
+  src : url("typographie/TypeUnion - Palo Wide Light.otf");
+}
+
+@font-face
+{
+font-family: "Palo-medium";
+src: url("typographie/TypeUnion - Palo Compressed Medium.otf");
+}
+
+.Introduction{
+  padding-bottom: 10rem;
+
+}
+/* Menu Nav*/
+.prenom
+{
+	cursor: pointer;
+	margin-right: auto;
+  list-style: none;
+  font-size: 40px;
+  font-family: "Palo-medium";
+}
+nav
+{
+	order: 1;
+}
+
+.cta
+{
+	order: 2;
+}
+
+li, a
+{
+	font-weight: 500;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	font-family: "DIN-Regular";
+}
+
+header
+{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 3% 6%;
+}
+
+.nav_link
+{
+	list-style: none;
+}
+
+.nav_link li
+{
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav_link li a
+{
+	transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover
+{
+	color: black;
+}
+
+
+/* Univers */
+ .my_univers{
+   background-color: #051c2c;
+
+ }
+
+ .my_univers h1{
+   font-size: 100px;
+   font-family: "Palo-medium";
+   padding: 10%;
+   padding-bottom: 0;
+   padding-top: 5%;
+   color: #ff4500;
+ }
+
+mark.blanc{
+  color: #f5f5f5;
+  background: none;
+}
+.all_container{
+  padding-bottom: 35%;
+
+}
+
+footer{
+  padding: 2%;
+  font-family: "DIN-Regular";
+text-align: center;
+
+}
+footer li {
+  list-style: none;
+  line-height: 250%;
+
+}
+
+.my_univers p{
+font-family: "DIN-Regular";
+color: #f5f5f5;
+  margin-top: 2rem;
+font-size: 20px;
+
+}
+
+#scroll
+{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 55px;
+    right: 55px;
+}
+
+#scroll img
+{
+    width: 40px;
+}
+
+
+
+p.align_left{
+  text-align: justify;
+  padding-top: 10%;
+}
+
+
+.container_1, .container_2, .container_3{
+  width: 25%;
+  height: 30%;
+float:left ;
+margin-left: 7%;
+padding: 2%;
+border-radius: 2%;
+
+}
+
+/*Gallery*/
+.container{
+	width: 100%;
+	max-width: 120rem;
+	margin: auto;
+	padding: 0 1.5rem;
+}
+
+.image-gallery{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-auto-rows: auto;
+	grid-gap: 1.5rem;
+	grid-template-areas: "img-1 img-2 img-3 img-4"
+                      "img-1 img-6 img-3 img-8"
+                      "img-9 img-10 img-5 img-7"
+                      "img-11 img-10 img-5 img-12"
+                      "img-11 img-13 img-14 img-12"
+                      "img-16 img-16 img-15 img-17"
+                      "img-19 img-19 img-18 img-18"
+                      "img-19 img-19 img-20 img-20"
+                      "img-22 img-22 img-25 img-21"
+                      "img-23 img-24 img-25 img-26"
+                      "img-28 img-27 img-27 img-26"
+                      "img-28 img-30 img-30 img-29";
+
+
+
+}
+
+.image-gallery a {
+	width: 100%;
+	height: 25rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-gallery a i {
+	font-size: 3rem;
+	position: relative;
+	z-index: 100;
+	padding: 1rem 3rem;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	border-radius: .4rem;
+	transition: opacity .5s;
+}
+
+.image-gallery a::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .8);
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+.image-gallery a:hover i, .image-gallery a:hover::before{
+	opacity: 1;
+}
+
+.img-1{
+	grid-area: img-1;
+  min-height: 51.5rem;
+	background-image: url("images/Luminance.png");
+}
+.img-2{
+	grid-area: img-2;
+	background-image: url("images/Femme_Papillons.png");
+}
+.img-3{
+	grid-area: img-3;
+  min-height: 51.5rem;
+	background-image: url("images/femme_Slime.png");
+}
+.img-4{
+	grid-area: img-4;
+	background-image: url("images/16.jpeg");
+}
+.img-5{
+	grid-area: img-5;
+	background-image: url("images/22.jpeg");
+    min-height: 51.5rem;
+}
+.img-6{
+	grid-area: img-6;
+	background-image: url("images/Logo_Graffiti.png");
+}
+.img-7{
+	grid-area: img-7;
+	background-image: url("images/11.jpeg");
+}
+.img-8{
+	grid-area: img-8;
+	background-image: url("images/12.jpeg");
+}
+
+.img-9{
+	grid-area: img-9;
+	background-image: url("images/24.jpeg");
+}
+.img-10{
+	grid-area: img-10;
+  min-height: 51.5rem;
+	background-image: url("images/30.jpeg");
+}
+.img-11{
+	grid-area: img-11;
+  min-height: 51.5rem;
+	background-image: url("images/25.jpeg");
+}
+
+.img-12{
+	grid-area: img-12;
+  min-height: 51.5rem;
+	background-image: url("images/28.jpeg");
+}
+
+.img-13{
+	grid-area: img-13;
+	background-image: url("images/10.jpeg");
+}
+
+.img-14{
+	grid-area: img-14;
+	background-image: url("images/coffe_shop_logo.png");
+}
+
+.img-15{
+	grid-area: img-15;
+	background-image: url("images/Coffee_Shop_Card_Mockup.png");
+}
+
+.img-16{
+	grid-area: img-16;
+  min-width: 51.5rem;
+	background-image: url("images/Ilustration_fille_v2.png");
+}
+
+.img-17{
+	grid-area: img-17;
+	background-image: url("images/Logo_Snail_Care.png");
+}
+
+.img-18{
+	grid-area: img-18;
+  min-width: 51.5rem;
+	background-image: url("images/Whipped_Cream.png");
+}
+
+.img-19{
+	grid-area: img-19;
+    min-height: 51.5rem;
+	background-image: url("images/femme.png");
+}
+.img-20{
+	grid-area: img-20;
+  min-width: 51.5rem;
+	background-image: url("images/Honey_Logo_v1_Plan_de_travail1.png");
+}
+
+.img-21{
+	grid-area: img-21;
+	background-image: url("images/Honey_Mockup.png");
+}
+.img-22{
+	grid-area: img-22;
+	background-image: url("images/Clem_Logo_v1&v2.png");
+}
+
+.img-23{
+	grid-area: img-23;
+	background-image: url("images/18.jpeg");
+}
+
+.img-24{
+	grid-area: img-24;
+	background-image: url("images/19.jpeg");
+}
+
+.img-25{
+	grid-area: img-25;
+  min-height: 51.5rem;
+	background-image: url("images/20.jpeg");
+}
+
+.img-26{
+	grid-area: img-26;
+  min-height: 51.5rem;
+	background-image: url("images/26.jpeg");
+}
+
+.img-27{
+	grid-area: img-27;
+  min-width: 51.5rem;
+	background-image: url("images/Bird.png");
+}
+
+.img-28{
+	grid-area: img-28;
+  min-height: 51.5rem;
+	background-image: url("images/27.jpeg");
+}
+
+.img-29{
+	grid-area: img-29;
+	background-image: url("images/9.jpeg");
+}
+
+.img-30{
+	grid-area: img-30;
+    min-width: 51.5rem;
+	background-image: url("images/Clem_Logo_Mockup.png");
+}
